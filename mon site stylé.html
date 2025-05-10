@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Web Stylé">
+    <title>Site Stylé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { transition: background 0.5s; }
+        .hover-btn:hover { background-color: #34d399; transform: scale(1.05); }
+        .transition-btn { transition: transform 0.3s; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center space-y-6">
+        <h1 class="text-5xl font-bold">Bienvenue sur le site de Zacharia</h1>
+        <p class="text-lg text-gray-400"></p>
+
+        <div class="space-x-4">
+            <button class="px-5 py-2 rounded-md bg-blue-500 hover:bg-blue-600 transition-btn hover-btn">Bouton 1</button>
+            <button class="px-5 py-2 rounded-md bg-green-500 hover:bg-green-600 transition-btn hover-btn">Bouton 2</button>
+            <button class="px-5 py-2 rounded-md bg-purple-500 hover:bg-purple-600 transition-btn hover-btn">Bouton 3</button>
+        </div>
+
+        <footer class="mt-10 text-gray-500">&copy; 2025 Mon Site Stylé</footer>
+    </div>
+
+    <script>
+        // Petite animation au survol
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mouseover', () => {
+                document.body.style.backgroundColor = '#1f2937';
+            });
+            btn.addEventListener('mouseleave', () => {
+                document.body.style.backgroundColor = '#111827';
+            });
+        });
+    </script>
+</body>
+</html>
